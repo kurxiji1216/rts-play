@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>RTS</title>
+  <style>html,body{background:#1b2418;height:100%;margin:0;font-family:system-ui,sans-serif;overflow:hidden}canvas{touch-action:none;display:block}.bar-top,.panel{box-sizing:border-box;color:#e8efe0;-webkit-user-select:none;user-select:none;padding-left:max(12px, env(safe-area-inset-left));padding-right:max(12px, env(safe-area-inset-right));background:#1b2418eb;align-items:center;gap:12px;display:flex;position:fixed;left:0;right:0}.bar-top{height:34px;font-size:15px;font-weight:600;top:0}.bar-top .clock{color:#a6b39a;font-variant-numeric:tabular-nums;margin-left:auto}#end{text-align:center;color:#e8efe0;background:#0f140dcc;justify-content:center;align-items:center;animation:.7s 1.3s both fade;display:flex;position:fixed;inset:0}#end h1{letter-spacing:.04em;margin:0 0 4px;font-size:clamp(40px,12vw,72px)}#end.win h1{color:#4ade80}#end.lose h1{color:#f87171}#end.draw h1{color:#facc15}#end p{color:#a6b39a;margin:0 0 20px}#end button{min-width:180px;min-height:56px;font-size:18px}@keyframes fade{0%{opacity:0}to{opacity:1}}@media (prefers-reduced-motion:reduce){#end{animation:none}}.bar-top b{color:#d9e97a;font-variant-numeric:tabular-nums}.panel{height:72px;padding-bottom:env(safe-area-inset-bottom);bottom:0}#info{flex:1;min-width:0;font-size:14px}#info strong{font-size:15px}#info em{color:#f87171;margin-left:6px;font-size:12px;font-style:normal}.hint,.meta{color:#a6b39a;font-size:12px}.bar{background:#0007;border-radius:3px;width:140px;max-width:100%;height:6px;margin:4px 0 2px;overflow:hidden}.bar i{background:#4ade80;height:100%;display:block}.chips{flex-wrap:wrap;gap:4px;margin-top:3px;display:flex}.chips span{background:#ffffff18;border-radius:4px;padding:1px 7px;font-size:12px}.actions{gap:8px;display:flex}button{min-width:56px;min-height:48px;font:inherit;color:#1b2418;touch-action:manipulation;background:#d9e97a;border:0;border-radius:8px;padding:0 14px;font-size:14px;font-weight:600}button:active:not(:disabled){background:#b9c95a}button:disabled{opacity:.35}button small{opacity:.75;font-size:11px;font-weight:500;display:block}#train{gap:8px;display:flex}[hidden]{display:none!important}.bar.inline{vertical-align:middle;width:70px;margin:0 0 0 4px;display:inline-block}.bar.prog i{background:#facc15}button.plain{color:#e8efe0;background:#fff2}button:focus-visible{outline-offset:2px;outline:3px solid #fff}</style>
+  <script type="module" crossorigin src="./assets/index-B-G1UZ6s.js"></script>
+</head>
+<body>
+  <div class="bar-top">Supplies <b id="supplies">0</b> <span>Army <b id="army">0</b></span><span class="clock" id="clock">0:00</span></div>
+  <div id="end" hidden>
+    <div><h1 id="end-title"></h1><p id="end-sub"></p><button id="btn-again">Play Again</button></div>
+  </div>
+  <div class="panel">
+    <div id="info"></div>
+    <div id="train"></div>
+    <div class="actions">
+      <button id="btn-stop" class="plain">Stop</button>
+      <button id="btn-army">All Army</button>
+      <button id="btn-clear" class="plain" aria-label="Deselect">✕</button>
+    </div>
+  </div>
+</body>
+</html>
